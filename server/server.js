@@ -24,14 +24,14 @@ io.on('connection', (socket) => {
 
   console.log('New user connected');
 
-  socket.emit('newMessage',{
-    from: 'gopendra',
-    text: "What's up everyone",
-    createdAt: new Date()
-  })
+  socket.on('createMessage', (message) => {
+    console.log('Message',message);
 
-  socket.on('createMessage', (createdMessage) => {
-    console.log('Message',createdMessage);
+    io.emit('newMessage', {
+      from: message.from,
+      text: message.text,
+      createdAt: new Date().getTime()
+    })
   })
 
   socket.on('disconnect', () => {
