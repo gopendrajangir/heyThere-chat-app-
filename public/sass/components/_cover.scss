@@ -6,11 +6,16 @@
      to right bottom, rgba($color-primary-light,0.8),rgba($color-primary-dark,0.8)),url(../images/cover.jpeg);
   background-size:cover;
   background-position:top;
-  display:flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 20vh;
+  text-align: center;
 }
 
 .heading-cover {
+  display: inline-block;
+  text-align: center;
+}
+
+.button-cover {
+  margin:10vh;
   text-align: center;
 }
