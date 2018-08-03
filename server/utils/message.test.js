@@ -12,3 +12,16 @@ describe('generateMessage', () => {
     expect(message).toMatchObject({from, text});
   })
 });
+
+describe('generateLocationMessage', () => {
+  it('should generate location correct message object', () => {
+    var from = 'Admin';
+    var latitude = 1;
+    var longitude = 1;
+    var url = `https://www.google.com/maps?q=1,1`;
+    var locationMessage = generateLocationMessage(from, latitude, longitude);
+
+    expect(locationMessage.from).toBe("Admin");
+    expect(locationMessage).toMatchObject({from, url});
+  })
+})

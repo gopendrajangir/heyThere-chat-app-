@@ -4,7 +4,7 @@ const express = require('express');
 const socketIO = require('socket.io');
 const routes = require('../routes/index');
 
-const {generateMessage} = require('./utils/message');
+const {generateMessage, generateLocationMessage} = require('./utils/message');
 const viewsPath = path.join(__dirname,'../views');
 const publicPath = path.join(__dirname,'../public');
 
@@ -35,6 +35,10 @@ io.on('connection', (socket) => {
 
     io.emit('newMessage',generateMessage(message.from,message.text));
 
+  })
+
+  socket.on('getCurrentPosition', (coords) => {
+    io.emit('newLocationMessage', generateLocationMessage('Admin', coords.latitude, coords.longitude))
   })
 
   socket.on('disconnect', () => {
