@@ -1,25 +1,29 @@
-.btn:link,
-.btn:visited {
+._btn:link,
+._btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius:100px;
   transition: all .2s;
-  width:15rem
+  width:15rem;
+  animation-name: moveUp;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 
-.btn:hover {
+._btn:hover {
   transform: translateY(-3px);
+  color:inherit;
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-.btn:active {
+._btn:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
-.btn-white {
+.btn_white {
   background-color: #fff;
   color: #777;
 }

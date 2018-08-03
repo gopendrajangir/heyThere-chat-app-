@@ -7,10 +7,10 @@
 }
 
 html{
-	font-size:100%;
+	font-size:80%;
 
 	@include respond-phone {
-		font-size: 200%;
+
 	}
 }
 

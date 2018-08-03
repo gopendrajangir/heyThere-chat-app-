@@ -4,22 +4,12 @@ html
   head
     meta(charset="utf-8")
     link(href="/css/style.css" rel="stylesheet" type="text/css")
+    link(href="/css/bootstrap.css" rel="stylesheet" type="text/css")
     link(href="https://fonts.googleapis.com/css?family=Comfortaa|Satisfy" rel="stylesheet")
+      
   body
-    div.container
-      div#chatInterface
-        p Hey there admin
-        ol#message
-        form#message-form
-          input(name="message", type="text" placeholder="Message")
-          button Send
-        button#send-location Send Location
-      div#cover
-        div.heading-cover
-          h1.primaryHeading heyThere
-          h2.secondaryHeading ( a Chat App )
-        div.button-cover
-          a(href="#").btn.btn-white Have a Chat
+    block content
+      
   script(src="/socket.io/socket.io.js")
   script(src="/js/libs/jquery.js")
   script(src="/js/socket.js")

@@ -1,0 +1,15 @@
+extends index
+
+block content
+
+  div#chatInterface
+    div.chat_Sidebar
+      h2.people-heading People
+      div#users
+    div.chat_main    
+      ol#message
+      div.chat_footer
+        form#message-form.form
+          input(name="message", type="text" placeholder="Message" autofocus autocomplete).message
+          button#send-message.btn.btn-primary Send
+          button#send-location.btn.btn-primary Send location
