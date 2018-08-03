@@ -6,6 +6,14 @@ socket.on('connect', function() {
   socket.on('newMessage', function(message) {
     console.log('Message',message);
   });
+
+  socket.on('welcomeMsg', function(welcomeMsg) {
+    console.log(welcomeMsg);
+  })
+
+  socket.on('joinMsg', function(joinMsg) {
+    console.log(joinMsg);
+  })
 });
 
 socket.on('disconnect', function() {

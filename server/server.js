@@ -4,6 +4,7 @@ const express = require('express');
 const socketIO = require('socket.io');
 const routes = require('../routes/index');
 
+const {generateMessage} = require('./utils/message');
 const viewsPath = path.join(__dirname,'../views');
 const publicPath = path.join(__dirname,'../public');
 
@@ -24,14 +25,15 @@ io.on('connection', (socket) => {
 
   console.log('New user connected');
 
+  socket.emit('welcomeMsg',generateMessage('Admin', 'Welcome to the chat app'));
+
+  socket.broadcast.emit('joinMsg',generateMessage("Admin","New user has joined the chat room"));
+
   socket.on('createMessage', (message) => {
     console.log('Message',message);
 
-    io.emit('newMessage', {
-      from: message.from,
-      text: message.text,
-      createdAt: new Date().getTime()
-    })
+    io.emit('newMessage',generateMessage(message.from,message.text));
+
   })
 
   socket.on('disconnect', () => {
