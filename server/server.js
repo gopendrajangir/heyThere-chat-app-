@@ -25,12 +25,13 @@ io.on('connection', (socket) => {
 
   console.log('New user connected');
 
-  socket.emit('welcomeMsg',generateMessage('Admin', 'Welcome to the chat app'));
+  socket.emit('newMessage',generateMessage('Admin', 'Welcome to the chat app'));
 
   socket.broadcast.emit('joinMsg',generateMessage("Admin","New user has joined the chat room"));
 
-  socket.on('createMessage', (message) => {
-    console.log('Message',message);
+  socket.on('createMessage', (message, callback) => {
+
+    callback('This is from the server');
 
     io.emit('newMessage',generateMessage(message.from,message.text));
 
