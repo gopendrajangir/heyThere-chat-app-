@@ -131,7 +131,7 @@ body {
   align-items: center;
   overflow-y: scroll; }
   .chat_Sidebar::-webkit-scrollbar {
-    width: 2px; }
+    width: 7px; }
   .chat_Sidebar::-webkit-scrollbar-thumb {
     background: black;
     height: 150px; }
@@ -148,11 +148,27 @@ body {
   justify-content: flex-start;
   justify-content: space-between; }
   .chat_main #message {
+    height: 90%;
+    overflow-y: scroll;
     margin: 10px;
     list-style-type: none; }
+    .chat_main #message::-webkit-scrollbar {
+      width: 7px; }
+    .chat_main #message::-webkit-scrollbar-thumb {
+      background: black;
+      height: 150px; }
+    .chat_main #message::-webkit-scrollbar-track {
+      background: white; }
     .chat_main #message li {
       font-family: "Comfortaa", cursive;
-      font-size: 1.4rem; }
+      font-size: 1.4rem;
+      padding: 10px; }
+      .chat_main #message li span {
+        border-radius: 10%;
+        background-color: lightgreen;
+        color: teal;
+        padding: 5px;
+        margin-left: 10px; }
   .chat_main .chat_footer {
     display: flex;
     justify-content: flex-start;

@@ -17,7 +17,7 @@
   align-items: center;
   overflow-y: scroll;
   &::-webkit-scrollbar{
-    width: 2px;
+    width: 7px;
   }
   &::-webkit-scrollbar-thumb {
     background:black;
@@ -39,11 +39,32 @@
   justify-content: space-between;
 
   #message {
+    height:90%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+      width: 7px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background:black;
+      height:150px;
+    }
+    &::-webkit-scrollbar-track {
+      background:white;
+    }
     margin:10px;
     list-style-type: none;
     li {
       font-family:$font-primary-heading;
       font-size: 1.4rem;
+      padding:10px;
+
+      span {
+        border-radius: 10%;
+        background-color:lightgreen;
+        color:teal;
+        padding:5px;
+        margin-left:10px;
+      }
     }
   }
 
