@@ -16,10 +16,18 @@ socket.on('disconnect', function() {
 socket.on('newMessage', function(message) {
   var formattedTime = moment(message.createdAt).format('h:mm a');
   var li = jQuery('<li></li>');
-  var span = jQuery('<span></span>');
-  span.text(`${formattedTime}`);
-  li.text(`${message.from}: ${message.text}`);
-  jQuery('#message').append(li.append(span));
+  var spanU = jQuery('<span></span>');
+  spanU.attr('class','spanU');
+  var spanT = jQuery('<span></span>');
+  spanT.attr('class','spanT');
+  var p = jQuery('<p></p>');
+  p.attr('class','text');
+  spanT.text(`${formattedTime}`);
+  spanU.text(`${message.from}`);
+  p.text(`${message.text}`);
+  li.append(spanU).append(spanT);
+  li.append(p);
+  jQuery('#message').append(li);
 
 });
 
@@ -37,11 +45,21 @@ $('#message-form').on('submit', function(e) {
 })
 
 socket.on('newLocationMessage', function(location) {
+
+  var formattedTime = moment(location.createdAt).format('h:mm a');
   var li = jQuery('<li></li>');
+  var spanU = jQuery('<span></span>');
+  spanU.attr('class','spanU');
+  var spanT = jQuery('<span></span>');
+  spanT.attr('class','spanT');
   var a = jQuery(`<a target="_blank">My current Location</a>`);
-  li.text(`${location.from}: `);
+  a.attr('class','locationText');
   a.attr('href',location.url);
-  jQuery('#message').append(li.append(a));
+  spanT.text(`${formattedTime}`);
+  spanU.text(`${location.from}`);
+  li.append(spanU).append(spanT);
+  li.append(a);
+  jQuery('#message').append(li);
 })
 
 var locationButton = $('#send-location');

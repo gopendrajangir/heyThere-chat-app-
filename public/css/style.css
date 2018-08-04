@@ -124,7 +124,7 @@ body {
 
 .chat_Sidebar {
   height: 100%;
-  flex-grow: 1;
+  width: 15%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -141,7 +141,7 @@ body {
 .chat_main {
   box-shadow: -1px 2px 10px black;
   height: 100%;
-  flex-grow: 6;
+  width: 85%;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -149,6 +149,7 @@ body {
   justify-content: space-between; }
   .chat_main #message {
     height: 90%;
+    width: 100%;
     overflow-y: scroll;
     margin: 10px;
     list-style-type: none; }
@@ -160,15 +161,31 @@ body {
     .chat_main #message::-webkit-scrollbar-track {
       background: white; }
     .chat_main #message li {
-      font-family: "Comfortaa", cursive;
-      font-size: 1.4rem;
-      padding: 10px; }
-      .chat_main #message li span {
-        border-radius: 10%;
-        background-color: lightgreen;
-        color: teal;
-        padding: 5px;
+      margin-top: 5px; }
+      .chat_main #message li .spanU {
+        font-size: 1.5rem;
+        font-family: "Satisfy", cursive;
         margin-left: 10px; }
+      .chat_main #message li .spanT {
+        font-size: 1.3rem;
+        color: silver;
+        margin: 10px; }
+      .chat_main #message li .text {
+        font-size: 1.3rem;
+        display: inline-block;
+        font-family: "Comfortaa", cursive;
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 5px;
+        border-radius: 5px;
+        margin: 5px 0px;
+        max-width: auto;
+        word-wrap: break-word;
+        overflow-wrap: word-wrap;
+        word-break: break-word; }
+      .chat_main #message li .locationText {
+        font-size: 1.3rem;
+        font-family: "Comfortaa", cursive;
+        font-style: oblique; }
   .chat_main .chat_footer {
     display: flex;
     justify-content: flex-start;
