@@ -177,11 +177,12 @@ body {
 .chat_Sidebar {
   height: 100%;
   width: 15%;
+  box-shadow: 0px 0px 15px grey;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.1); }
   .chat_Sidebar::-webkit-scrollbar {
     width: 5px; }
   .chat_Sidebar::-webkit-scrollbar-thumb {
@@ -189,11 +190,36 @@ body {
     height: 150px; }
   .chat_Sidebar::-webkit-scrollbar-track {
     background: white; }
+  .chat_Sidebar .people-heading {
+    font-weight: 400;
+    padding: 1.5rem;
+    color: white;
+    background-color: blue;
+    margin: 0px;
+    font-family: "Satisfy", cursive;
+    letter-spacing: 5px;
+    border-left: 5px solid white;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white; }
+  .chat_Sidebar ol {
+    list-style-type: none; }
+    .chat_Sidebar ol .user {
+      font-family: "Comfortaa", cursive;
+      color: black;
+      font-size: 1.5rem;
+      padding: 5px 10px;
+      margin: 10px;
+      background-color: white;
+      max-width: auto;
+      word-wrap: break-word;
+      overflow-wrap: word-wrap;
+      word-break: break-word; }
 
 .chat_main {
-  box-shadow: -1px 2px 10px black;
-  height: 100%;
-  width: 85%;
+  box-shadow: 0px 0px 30px silver;
+  height: 92%;
+  margin: 2%;
+  width: 82%;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -208,12 +234,13 @@ body {
     .chat_main #message::-webkit-scrollbar {
       width: 5px; }
     .chat_main #message::-webkit-scrollbar-thumb {
-      background: black;
+      background: silver;
+      border: 5px;
       height: 150px; }
     .chat_main #message::-webkit-scrollbar-track {
       background: white; }
     .chat_main #message li {
-      margin-top: 5px; }
+      margin-top: 10px; }
       .chat_main #message li .spanU {
         font-size: 1.5rem;
         font-family: "Satisfy", cursive;
@@ -237,19 +264,27 @@ body {
       .chat_main #message li .locationText {
         font-size: 1.3rem;
         font-family: "Comfortaa", cursive;
-        font-style: oblique; }
+        text-decoration: underline; }
+    .chat_main #message .me {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 2rem; }
   .chat_main .chat_footer {
     display: flex;
     justify-content: flex-start;
-    justify-content: space-between; }
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px; }
     .chat_main .chat_footer .form {
       width: 100%;
+      height: 3rem;
       display: flex;
       justify-content: space-between; }
       .chat_main .chat_footer .form .message {
         width: 80%;
         font-family: "Comfortaa", cursive;
-        font-size: 1.1rem; }
+        font-size: 1.3rem; }
       .chat_main .chat_footer .form #send-message {
         width: 65px; }
       .chat_main .chat_footer .form #send-location {
