@@ -37,6 +37,9 @@
 
 html {
   font-size: 80%; }
+  @media (max-width: 500px) {
+    html {
+      font-size: 60%; } }
 
 body {
   box-sizing: border-box; }
