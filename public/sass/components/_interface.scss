@@ -17,7 +17,7 @@
   align-items: center;
   overflow-y: scroll;
   &::-webkit-scrollbar{
-    width: 7px;
+    width: 5px;
   }
   &::-webkit-scrollbar-thumb {
     background:black;
@@ -43,7 +43,7 @@
     width:100%;
     overflow-y: scroll;
     &::-webkit-scrollbar{
-      width: 7px;
+      width: 5px;
     }
     &::-webkit-scrollbar-thumb {
       background:black;

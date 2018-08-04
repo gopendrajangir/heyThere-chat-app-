@@ -131,7 +131,7 @@ body {
   align-items: center;
   overflow-y: scroll; }
   .chat_Sidebar::-webkit-scrollbar {
-    width: 7px; }
+    width: 5px; }
   .chat_Sidebar::-webkit-scrollbar-thumb {
     background: black;
     height: 150px; }
@@ -154,7 +154,7 @@ body {
     margin: 10px;
     list-style-type: none; }
     .chat_main #message::-webkit-scrollbar {
-      width: 7px; }
+      width: 5px; }
     .chat_main #message::-webkit-scrollbar-thumb {
       background: black;
       height: 150px; }
