@@ -2,3 +2,18 @@ extends index
 
 block content
   
+  div.centered-form 
+    div.centered-form__form
+      form(action="/interface")
+        div.form-field
+          h3 Join a Chat
+        div.form-field
+          label Display name
+          br
+          input(type="text" name="name" autofocus)
+        div.form-field
+          label Room name
+          br
+          input(type="text" name="room")
+        div.form-field
+          button.btn.btn-info Join
