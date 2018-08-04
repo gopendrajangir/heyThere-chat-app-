@@ -1,19 +1,25 @@
-extends index
+doctype html
 
-block content
-  
-  div.centered-form 
-    div.centered-form__form
-      form(action="/interface")
-        div.form-field
-          h3 Join a Chat
-        div.form-field
-          label Display name
-          br
-          input(type="text" name="name" autofocus)
-        div.form-field
-          label Room name
-          br
-          input(type="text" name="room")
-        div.form-field
-          button.btn.btn-info Join
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    link(href="/css/style.css" rel="stylesheet" type="text/css")
+    link(href="/css/bootstrap.css" rel="stylesheet" type="text/css")
+    link(href="https://fonts.googleapis.com/css?family=Comfortaa|Satisfy" rel="stylesheet")
+  body
+    div.centered-form 
+      div.centered-form__form
+        form(action="/interface")
+          div.form-field
+            h3 Join a Chat
+          div.form-field
+            label Display name
+            br
+            input(type="text" name="name" autofocus)
+          div.form-field
+            label Room name
+            br
+            input(type="text" name="room")
+          div.form-field
+            input(type="submit" value="Join").btn.btn-info

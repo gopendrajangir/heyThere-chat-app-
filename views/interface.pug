@@ -1,15 +1,26 @@
-extends index
+doctype html
 
-block content
-
-  div#chatInterface
-    div.chat_Sidebar
-      h2.people-heading People
-      div#users
-    div.chat_main    
-      ol#message
-      div.chat_footer
-        form#message-form.form
-          input(name="message", type="text" placeholder="Message" autofocus autocomplete).message
-          button#send-message.btn.btn-primary Send
-          button#send-location.btn.btn-primary Send location
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    link(href="/css/style.css" rel="stylesheet" type="text/css")
+    link(href="/css/bootstrap.css" rel="stylesheet" type="text/css")
+    link(href="https://fonts.googleapis.com/css?family=Comfortaa|Satisfy" rel="stylesheet")
+  body
+    div#chatInterface
+      div.chat_Sidebar
+        h2.people-heading People
+        div#users
+      div.chat_main    
+        ol#message
+        div.chat_footer
+          form#message-form.form
+            input(name="message", type="text" placeholder="Message" autofocus autocomplete).message
+            button#send-message.btn.btn-primary Send
+            button#send-location.btn.btn-primary Send location
+  script(src="/socket.io/socket.io.js")
+  script(src="/js/libs/jquery.js")
+  script(src="/js/libs/moment.js")
+  script(src="/js/libs/deparam.js")
+  script(src="/js/interface.js")
