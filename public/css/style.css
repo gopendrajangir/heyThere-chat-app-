@@ -37,7 +37,7 @@
 
 html {
   font-size: 80%; }
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     html {
       font-size: 60%; } }
 
@@ -173,6 +173,9 @@ body {
   justify-content: center;
   justify-content: space-between;
   align-items: flex-start; }
+  @media (max-width: 800px) {
+    #chatInterface {
+      flex-direction: column; } }
 
 .chat_Sidebar {
   height: 100%;
@@ -181,15 +184,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.1); }
-  .chat_Sidebar::-webkit-scrollbar {
-    width: 5px; }
-  .chat_Sidebar::-webkit-scrollbar-thumb {
-    background: black;
-    height: 150px; }
-  .chat_Sidebar::-webkit-scrollbar-track {
-    background: white; }
+  @media (max-width: 800px) {
+    .chat_Sidebar {
+      width: 100%;
+      height: 18%; } }
   .chat_Sidebar .people-heading {
     font-weight: 400;
     padding: 1.5rem;
@@ -200,20 +199,46 @@ body {
     letter-spacing: 5px;
     border-left: 5px solid white;
     border-top: 5px solid white;
-    border-bottom: 5px solid white; }
-  .chat_Sidebar ol {
-    list-style-type: none; }
-    .chat_Sidebar ol .user {
-      font-family: "Comfortaa", cursive;
-      color: black;
-      font-size: 1.5rem;
-      padding: 5px 10px;
-      margin: 10px;
-      background-color: white;
-      max-width: auto;
-      word-wrap: break-word;
-      overflow-wrap: word-wrap;
-      word-break: break-word; }
+    border-bottom: 5px solid white;
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-between;
+    cursor: pointer; }
+    .chat_Sidebar .people-heading .peopleListDown {
+      border-radius: 100%;
+      padding: 5px; }
+    .chat_Sidebar .people-heading .peopleListUp {
+      border-radius: 100%;
+      padding: 5px; }
+  .chat_Sidebar #users {
+    height: 60%; }
+    @media (max-width: 800px) {
+      .chat_Sidebar #users {
+        width: 100%;
+        height: 0%; } }
+    .chat_Sidebar #users ol {
+      height: 100%;
+      overflow-y: scroll;
+      list-style-type: none; }
+      .chat_Sidebar #users ol::-webkit-scrollbar {
+        width: 5px; }
+      .chat_Sidebar #users ol::-webkit-scrollbar-thumb {
+        background: silver;
+        height: 50%;
+        border-radius: 0px; }
+      .chat_Sidebar #users ol::-webkit-scrollbar-track {
+        background: white; }
+      .chat_Sidebar #users ol .user {
+        font-family: "Comfortaa", cursive;
+        color: black;
+        font-size: 1.5rem;
+        padding: 5px 10px;
+        margin: 10px;
+        background-color: white;
+        max-width: auto;
+        word-wrap: break-word;
+        overflow-wrap: word-wrap;
+        word-break: break-word; }
 
 .chat_main {
   box-shadow: 0px 0px 30px silver;
@@ -225,6 +250,10 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   justify-content: space-between; }
+  @media (max-width: 800px) {
+    .chat_main {
+      width: 100%;
+      height: 88%; } }
   .chat_main #message {
     height: 90%;
     width: 100%;
@@ -289,6 +318,12 @@ body {
         width: 65px; }
       .chat_main .chat_footer .form #send-location {
         width: 122px; }
+
+.show {
+  display: inline; }
+
+.hide {
+  display: none; }
 
 .container {
   position: relative;

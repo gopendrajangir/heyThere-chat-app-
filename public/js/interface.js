@@ -123,3 +123,9 @@ locationButton.on('click', function () {
     alert('Unable to fetch location');
   })
 })
+
+if($(window).width() <= 700){
+  $('.people-heading').on('click',function(){
+      $('.chat_main').toggle({'height':'0%'});
+  })
+}
